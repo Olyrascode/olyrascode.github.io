@@ -1,0 +1,362 @@
+.body {
+    background-color: rgb(7, 12, 73);
+}
+
+
+
+.nom {
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Staatliches', cursive;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 6.5em;
+    text-align: center;
+font-weight: 700;
+    color: #ddd;
+text-shadow: 6px 6px 25px rgba(49, 175, 248, 0.473);
+    
+    }
+  
+.choix-1,
+.choix-2,
+.choix-3 {
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 8px #434344;
+
+}
+/* choix page 1 */
+p {
+   font-family: 'Roboto Slab', serif;
+    background-color: white;
+    text-align: center;
+    font-size: 6.5em;
+    padding: 3%;
+    margin: 2%;
+    border-radius: 3%;
+    box-shadow: 8px 8px 30px rgb(0, 0, 0);
+    
+
+}
+p :hover {
+    color: rgb(0, 102, 255);
+    padding: 3%;
+    margin: 2%;
+    font-size: 110%;
+    text-shadow: 6px 6px 25px rgb(66, 166, 248);
+
+}
+li {
+  font-size: 20px;
+}
+
+
+
+
+a {
+ text-decoration: none;
+}
+
+/* bouton home */ 
+.btn-home {
+    top:0px;
+    left:0px;
+    width: 50px;
+    height: 50px;
+    background-image: url('home.png');
+    background-repeat: no-repeat;
+    background-position: left bottom ;
+    position:absolute;
+    margin-left: 20px;
+    padding-top: 20px;
+}
+/* video de fond */
+.video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  
+  }
+
+  
+  
+
+
+
+
+
+                                         /* Début des cartes page 2 */
+/* style des cartes */
+  .card {
+    border-radius: 16px;
+    margin-left: 400px;
+    width: 500px;
+    
+    max-width: 100%;
+    min-height: 500px;
+    box-shadow: 6px 6px 5px 1px rgba(0, 0, 0, 0.781);
+    overflow: hidden;
+    background-image: url(acfa.jpg);
+    background-size: cover;
+  }
+  
+  /* div des infos */
+  .info,
+  .info_2 {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: #fff;
+    transform: translateY(100%)
+      translateY(-88px)
+      translateZ(0);
+    transition: transform 0.3s ease-out;
+  }
+
+  /* background div infos */
+.info:before:before {
+  z-index: -1;
+  display: block; position: absolute;
+  content: ' ';
+  width: 100%; height: 100%;
+  overflow: hidden;
+  background-image: url(acfa.jpg);
+  filter: blur(10px);
+  background-size: cover;
+  opacity: 0.25;
+  transform: translateY(-100%)
+    translateY(88px)
+    translateZ(0);
+  transition: transform 0.3s ease-out;
+}
+
+/* style du titre */
+.title {
+    margin: 0;
+    padding: 24px;
+    font-size: 40px;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.87);
+  }
+  
+  .description {
+    margin: 0;
+    padding: 0 24px 24px;
+    font-size: 25px;
+    line-height: 1.5;
+  }
+ /* hover de la souris */
+  .card:hover .info,
+.card:hover .info:before {
+  transform: translateY(0) translateZ(0);
+}
+
+                                                /* carte 2*/
+.card_2 {
+    border-radius: 16px;
+    margin-left: 1000px;
+    margin-top: -500px;
+    width: 500px;
+    
+    max-width: 100%;
+    min-height: 500px;
+    box-shadow: 6px 6px 5px 1px rgba(0, 0, 0, 0.781);
+    overflow: hidden;
+    background-image: url(menuise.jpg);
+    background-size: cover;
+    
+  }
+
+  /* hover de la souris */
+  .card_2:hover .info_2,
+.card_2:hover .info_2:before {
+  transform: translateY(0) translateZ(0);
+}
+
+
+
+
+                                        /*FIN DES CARTES PAGE 2 */
+
+
+
+
+                                        .projcard-container,
+.projcard-container * {
+  box-sizing: border-box;
+}
+.projcard-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+}
+.projcard {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  font-size: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.projcard:hover {
+  box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
+  transform: translate(0px, -3px);
+}
+.projcard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(-70deg, #424242, transparent 50%);
+  opacity: 0.07;
+}
+.projcard:nth-child(2n)::before {
+  background-image: linear-gradient(-250deg, #424242, transparent 50%);
+}
+.projcard-innerbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.projcard-img {
+  position: absolute;
+  height: 300px;
+  width: 400px;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s ease;
+}
+.projcard:nth-child(2n) .projcard-img {
+  left: initial;
+  right: 0;
+}
+.projcard:hover .projcard-img {
+  transform: scale(1.05) rotate(1deg);
+}
+.projcard:hover .projcard-bar {
+  width: 70px;
+}
+.projcard-textbox {
+  position: absolute;
+  top: 7%;
+  bottom: 7%;
+  left: 430px;
+  width: calc(100% - 470px);
+  font-size: 17px;
+}
+.projcard:nth-child(2n) .projcard-textbox {
+  left: initial;
+  right: 430px;
+}
+.projcard-textbox::before,
+.projcard-textbox::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: #ff0000bb;
+  background: #fff;
+  top: -20%;
+  left: -55px;
+  height: 140%;
+  width: 60px;
+  transform: rotate(8deg);
+}
+.projcard:nth-child(2n) .projcard-textbox::before {
+  display: none;
+}
+.projcard-textbox::after {
+  display: none;
+  left: initial;
+  right: -55px;
+}
+.projcard:nth-child(2n) .projcard-textbox::after {
+  display: block;
+}
+.projcard-textbox * {
+  position: relative;
+}
+.projcard-title {
+  font-family: 'Voces', 'Open Sans', arial, sans-serif;
+  font-size: 30px;
+}
+.projcard-subtitle {
+  font-family: 'Voces', 'Open Sans', arial, sans-serif;
+  color: #888;
+}
+.projcard-bar {
+  left: -2px;
+  width: 50px;
+  height: 5px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #424242;
+  transition: width 0.2s ease;
+}
+
+.projcard-description {
+  z-index: 10;
+  font-size: 20px;
+  color: #424242;
+  height: 125px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.projcard-tagbox {
+  position: absolute;
+  bottom: 3%;
+  font-size: 14px;
+  cursor: default;
+  user-select: none;
+  pointer-events: none;
+}
+.projcard-tag {
+  display: inline-block;
+  background: #E0E0E0;
+  color: #777;
+  border-radius: 3px 0 0 3px;
+  line-height: 26px;
+  padding: 0 10px 0 23px;
+  position: relative;
+  margin-right: 20px;
+  cursor: default;
+  user-select: none;
+  transition: color 0.2s;
+}
+.projcard-tag::before {
+  content: '';
+  position: absolute;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  height: 6px;
+  left: 10px;
+  width: 6px;
+  top: 10px;
+}
+.projcard-tag::after {
+  content: '';
+  position: absolute;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #E0E0E0;
+  border-top: 13px solid transparent;
+  right: -10px;
+  top: 0;
+}
+
+
+                          /* card page 4 */
+                          /* en faites c'est les meme mais avec des balises ul li */
